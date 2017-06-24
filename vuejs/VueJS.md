@@ -32,7 +32,23 @@ The process: Raw HTML -> Vue Object -> Real HTML
 Directive - instruction
 
 ## Directives
- * v-on   - takes event and updates when the event is happening
+ * v-on   - takes event and updates when the event is happening. *v-on:click="increase**(variable1, variable2)** *
+	** v-on:click
+	** v-on:mousemove
+	** v-on:keyup - has key modifers: keyup.enter.space
  * v-bind - bind an **attribute** to vue
  * v-once - content won't be overwritten and will stick to the initial value
  * v-html - renders HTML code, won't escape. (Be careful, csrf is an issue)
+ 
+**Modifers**
+Modifers modify an event. v-on:mousemove**<.stop>** - modifer. They are **chainable**.
+* **.stop** modifer stops the propagation of a function
+* **.prevent** modifer prevents the default behaviour
+***
+Events have data that is passed with it. To access it add even variable to a function.
+
+*event.clientX
+*event.clientY
+This 2 properties hold the coordinates of client's mouse.
+
+$event - DOM created object, which can be passed to a function as variable
