@@ -58,6 +58,17 @@ $event.target.value - gives the value of the targeted tag
 **VueJS Options**
 *el:
 *data:
-*methods:
-*computed: - same to methods, only it doesn't recalculate the return value; 
+*methods: executed every time the data propery changes
+*computed: - same to methods, only it doesn't recalculate the return value;
 Use that when the function doesn't recalculate any data, but instead caches this.
+*watch: must be a name of one of the properties. Executes everytime the propery changes. Good for asynchronous tasks.
+***
+:class="{<css_class>:<boolean_var>}" takes a CSS class and JS boolean object to determen wheither add the class or not.
+
+Better to do this: 
+property returns the JS object
+ ```javascript
+ return {
+	<css_class>: <boolean_var>,
+ };
+ ```
