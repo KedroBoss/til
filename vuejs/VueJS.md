@@ -72,3 +72,7 @@ property returns the JS object
 	<css_class>: <boolean_var>,
  };
  ```
+ 
+ ***
+ *Change styles without classes:*
+to change a style property of an element instead of assigning a class use <:style="{'background-color':color}">
