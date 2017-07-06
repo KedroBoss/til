@@ -40,6 +40,7 @@ Directive - instruction
  * v-once - content won't be overwritten and will stick to the initial value
  * v-html - renders HTML code, won't escape. (Be careful, csrf is an issue)
  * v-model = "<variable_name>" - makes 2 way data binding
+ * v-if
  
 **Modifers**
 Modifers modify an event. v-on:mousemove**<.stop>** - modifer. They are **chainable**.
@@ -76,3 +77,32 @@ property returns the JS object
  ***
  *Change styles without classes:*
 to change a style property of an element instead of assigning a class use <:style="{'background-color':color}">
+
+***
+
+**Conditionals**
+v-if = "boolean"
+Removes the element
+
+v-else refers to the "v-if" in front of it
+
+v-else-if - new condition
+
+<template> tag can help to group elemetns which should be affected by one condition. 
+Similar to <div> but <template> doesn't renders in the DOM, so it won't affect the structure.
+
+v-show - has the same syntax as v-if. Instead of deleting it just hides it(still be able in the DOMs)
+
+***
+
+**Lists**
+
+<v-for="foo in foos"> {{ foo }}; Here foos is a list
+
+<v-for="(foo, index) in foos">
+
+To list through objects:
+
+<v-for="object in objects">{{ object.age }}
+
+Special syntax <v-for="foo in foos" :key="foo"> for better dynamic updating of lists
